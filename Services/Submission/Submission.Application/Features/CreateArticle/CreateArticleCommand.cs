@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Articles.Abstractions;
 using Articles.Abstractions.Enums;
 using FluentValidation;
+using MediatR;
 
 namespace Submission.Application.Features.CreateArticle;
 
-public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType ArticleType)
+public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType ArticleType) : IRequest<IdResponse>
 {
 
 }

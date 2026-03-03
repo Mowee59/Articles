@@ -7,6 +7,6 @@
     <Project Path="services/submission/Submission.Application/Submission.Application.csproj" Id="3352da2d-c192-4e8d-ab17-57a1d005d764" />
     <Project Path="services/submission/Submission.Domain/Submission.Domain.csproj" Id="8c785737-086c-4b20-892b-b250e50eec1f" />
     <Project Path="services/submission/Submission.Persistence/Submission.Persistence.csproj" Id="d0410a3a-5fcb-4e0d-a0a6-f5cf826e7140" />
-    <Project Path="Services/Submission/SubmissionApi/Submission.Api.csproj" Id="e8620be7-e3c5-4fe3-9fe6-06ecdae98ed2" />
+    <Project Path="Services/Submission/SubmissionApi/Submission.Api.csproj" Id="e8620be7-e3c5-4fe3-9fe6-06ecdae98ed2" DisplayName="Submission.API" />
   </Folder>
 </Solution>

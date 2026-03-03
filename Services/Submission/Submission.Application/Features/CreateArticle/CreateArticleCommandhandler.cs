@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Articles.Abstractions;
+using MediatR;
 
-namespace Submission.Application.Features.CreateArticle
+
+namespace Submission.Application.Features.CreateArticle;
+
+internal class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand, IdResponse>
 {
-    internal class CreateArticleCommandhandler
+    public Task<IdResponse> Handle(CreateArticleCommand request, CancellationToken cancellationToken)
     {
+        throw new NotImplementedException();
     }
 }
+
