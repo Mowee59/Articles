@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using Submission.Domain.Entities;
 
 namespace Submission.Persistence.Repositories;
 
-public class ArticleRepository
-{
+public class ArticleRepository(SubmissionDbContext dbContext)
+    : Repository<Article>(dbContext)
+{ 
 
 }
