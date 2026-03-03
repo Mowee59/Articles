@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="BuildingBlocks/Articles.Abstractions/Articles.Abstractions.csproj" Id="3032bbbc-8952-4fa7-9eb9-824ec81a10b9" />
+  </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Submission/">
     <Project Path="services/submission/Submission.Application/Submission.Application.csproj" Id="3352da2d-c192-4e8d-ab17-57a1d005d764" />
