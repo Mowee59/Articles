@@ -4,7 +4,7 @@ using Submission.Domain.Entities;
 
 namespace Submission.Persistence;
 
-public class SubmissionDbContext : DbContext
+public class SubmissionDbContext(DbContextOptions<SubmissionDbContext> options) : DbContext(options)
 {
     #region Entities
     public virtual DbSet<Article> Articles { get; set; }
@@ -13,6 +13,7 @@ public class SubmissionDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+       base.OnModelCreating(modelBuilder);
        modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
     }
 }
