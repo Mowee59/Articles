@@ -1,11 +1,10 @@
 ﻿using Articles.Abstractions.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Blocks.Domain.Entities;
+
 
 namespace Submission.Domain.Entities;
 
-public partial class Journal
+public partial class Journal 
 {
     public Article CreateArticle(string title, ArticleType Type, string scope )
     {

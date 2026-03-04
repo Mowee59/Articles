@@ -1,16 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Text.Json.Serialization;
 using Articles.Abstractions;
 using Articles.Abstractions.Enums;
+using Blocks.Domain;
 using FluentValidation;
 using MediatR;
 
 namespace Submission.Application.Features.CreateArticle;
 
-public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType ArticleType) : IRequest<IdResponse>
+public record CreateArticleCommand(int JournalId, string Title, string Scope, ArticleType ArticleType) : IAuditableAction, IRequest<IdResponse>
 {
-
+    [JsonIgnore]
+    public DateTime CreatedOn => DateTime.UtcNow;
+    [JsonIgnore]
+    public int CreatedById { get; set; } // TODO - This will be set in the command handler, based on the current user context
 }
 
 
