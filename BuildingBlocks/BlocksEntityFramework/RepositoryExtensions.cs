@@ -35,4 +35,29 @@ public static class RepositoryExtensions
         return entity;
     }
 
+    public static async Task<TEntity> GetByIdOrThrowAsync<TEntity, TContext>(this Repository<TContext, TEntity> repository, int id)
+        where TContext : DbContext
+        where TEntity : class, IEntity
+    {
+        var entity = await repository.GetByIdAsync(id);
+        if (entity is null)
+        {
+            throw new HttpRequestException($"{typeof(TEntity).Name} not found.");
+        }
+
+        return entity;
+    }
+
+    public static async Task<TEntity> FindByIdOrThrowAsync<TEntity>(this DbSet<TEntity> repository, int id)
+       where TEntity : class, IEntity
+    {
+        var entity = await repository.FindAsync(id);
+        if (entity is null)
+        {
+            throw new HttpRequestException($"{typeof(TEntity).Name} not found.");
+        }
+
+        return entity;
+    }
+
 }
