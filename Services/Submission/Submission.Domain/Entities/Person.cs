@@ -1,11 +1,10 @@
 ﻿using Blocks.Domain.Entities;
-using Submission.Domain.ValueObjects;
 
 namespace Submission.Domain.Entities;
 
-public class Person : IEntity
+public class Person : Entity
 {
-    public int Id {  get; init; }
+
     public required string FirstName { get; init; }
     public required string LastName { get; init; }
 
@@ -17,7 +16,7 @@ public class Person : IEntity
 
     // Navigation property for the articles this person is involved in,
     // set to private set to prevent external modification, ensuring that the relationship is managed through the ArticleActor entity
-    public IReadOnlyCollection<ArticleActor> ArticleActors { get; private set; } = new List<ArticleActor>(); 
+    public IReadOnlyCollection<ArticleActor> ArticleActors { get; private set; } = new List<ArticleActor>();
 
     public string TypeDiscriminator { get; init; } = null!; // Discriminator for EF Core to distinguish between Author and Reviewer and other eventual inherited types of Person
 
