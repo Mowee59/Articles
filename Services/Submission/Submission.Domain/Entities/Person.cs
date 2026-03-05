@@ -11,7 +11,7 @@ public class Person : IEntity
 
     public string FullName => $"{FirstName} {LastName}";
     public string? Title { get; set; }
-    public required EmailAdress EmailAdress { get; set; } // TODO - Use a value object for email address to ensure validation and immutability
+    public required EmailAdress EmailAdress { get; set; }
     public required string Afiliation { get; set; }
     public int? UserId { get; init; } // Optional link to a user account, if applicable
 
