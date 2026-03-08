@@ -8,7 +8,7 @@ public class FileExtension : StringValueObject
 {
     private FileExtension(string value) => Value = value;
 
-    public static FileExtension FromeFileName(string fileName, AssetTypeDefinition assetType)
+    public static FileExtension FromFileName(string fileName, AssetTypeDefinition assetType)
     {
         var extension = Path.GetExtension(fileName).Remove(0, 1); // Removing the dot from the extension
 

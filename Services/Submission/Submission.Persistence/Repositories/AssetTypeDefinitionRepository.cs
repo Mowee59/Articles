@@ -6,6 +6,6 @@ using Submission.Domain.Entities;
 namespace Submission.Persistence.Repositories;
 
 public class AssetTypeDefinitionRepository(SubmissionDbContext dbContext, IMemoryCache cache) 
-    : CacheRepository<SubmissionDbContext, AssetTypeDefinition, AssetType>(dbContext, cache)
+    : CachedRepository<SubmissionDbContext, AssetTypeDefinition, AssetType>(dbContext, cache)
 {
 }
