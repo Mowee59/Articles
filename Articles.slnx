@@ -8,6 +8,11 @@
     <Project Path="BuildingBlocks/BlocksEntityFramework/Blocks.EntityFramework.csproj" Id="5b701f64-d065-428a-9c0a-b28226940aa7" />
     <Project Path="Domain/Blocks.Domain.csproj" Id="fca835cc-3225-4ccf-aabb-5cbd06cca65d" />
   </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/FileStorage/">
+    <Project Path="Modules/FileStorage/FileStorage.Contracts/FileStorage.Contracts.csproj" Id="667f1698-92f3-4e3e-ac60-35d8d4cb3be3" />
+    <Project Path="Modules/FileStorage/FileStorage.MongoGridFS/FileStorage.MongoGridFS.csproj" Id="80813994-b857-4461-a5ed-f392e5d22ba7" />
+  </Folder>
   <Folder Name="/Services/" />
   <Folder Name="/Services/Submission/">
     <Project Path="services/submission/Submission.Application/Submission.Application.csproj" Id="3352da2d-c192-4e8d-ab17-57a1d005d764" />
