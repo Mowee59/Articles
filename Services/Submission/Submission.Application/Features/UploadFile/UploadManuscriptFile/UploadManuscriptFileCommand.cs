@@ -1,26 +1,36 @@
-﻿using Blocks.Core.FluentValidation;
+using Blocks.Core.FluentValidation;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace Submission.Application.Features.UploadFile;
 
+/// <summary>
+/// Command to upload a manuscript file asset for an article.
+/// </summary>
 public record UploadManuscriptFileCommand : ArticleCommand
 {
     /// <summary>
-    /// The asset type fo the file
+    /// Asset type for the uploaded file.
     /// </summary>
     [Required]
     public AssetType AssetType { get; init; }
 
     /// <summary>
-    /// The file to be uploaded
+    /// File to be uploaded as the manuscript.
     /// </summary>
     [Required]
     public IFormFile File { get; init; } = null!;
 
+    /// <summary>
+    /// Action type representing a file upload.
+    /// </summary>
     public override ArticleActionType ActionType => ArticleActionType.Upload;
 }
 
+/// <summary>
+/// Validator for <see cref="UploadManuscriptFileCommand"/> enforcing allowed asset type
+/// and presence of a file to upload.
+/// </summary>
 public class UploadManuscriptFileCommandValidator : ArticleCommandValidator<UploadManuscriptFileCommand>
 {
     public UploadManuscriptFileCommandValidator()

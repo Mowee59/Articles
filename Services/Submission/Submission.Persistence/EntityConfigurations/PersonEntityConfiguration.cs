@@ -5,8 +5,17 @@ using Submission.Domain.Entities;
 
 namespace Submission.Persistence.EntityConfigurations;
 
+/// <summary>
+/// EF Core configuration for the <see cref="Person"/> hierarchy, including discriminator,
+/// indexes, and value object mappings.
+/// </summary>
 internal class PersonEntityConfiguration : EntityConfiguration<Person>
 {
+    /// <summary>
+    /// Configures the table-per-hierarchy mapping for <see cref="Person"/> and its subtypes,
+    /// as well as property lengths, optional user link, and the owned <c>EmailAdress</c> value object.
+    /// </summary>
+    /// <param name="builder">The entity type builder.</param>
     public override void Configure(EntityTypeBuilder<Person> builder)
     {
         base.Configure(builder);

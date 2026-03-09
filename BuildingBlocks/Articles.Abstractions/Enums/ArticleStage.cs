@@ -1,4 +1,6 @@
-﻿namespace Articles.Abstractions.Enums;
+namespace Articles.Abstractions.Enums;
+
+
 public enum ArticleStage
 {
     Created

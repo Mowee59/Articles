@@ -1,4 +1,4 @@
-﻿using Articles.Abstractions;
+using Articles.Abstractions;
 using Articles.Abstractions.Enums;
 using Articles.Security;
 using MediatR;
@@ -7,8 +7,15 @@ using Submission.Application.Features.UploadFile;
 
 namespace Submission.API.Endpoints;
 
+/// <summary>
+/// Minimal API endpoint mapping for uploading a manuscript file for an article.
+/// </summary>
 public static class UploadManuscriptFileEndpoint
 {
+    /// <summary>
+    /// Maps the POST endpoint used to upload a manuscript file and returns a created asset reference.
+    /// </summary>
+    /// <param name="app">The endpoint route builder used to configure routes.</param>
     public static void Map(this IEndpointRouteBuilder app)
     {
         app.MapPost("/articles/{articleId:int}/assets/manuscript:upload",

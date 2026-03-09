@@ -1,6 +1,10 @@
-﻿namespace Blocks.Core.Constraints;
+namespace Blocks.Core.Constraints;
 
-public class MaxLength
+/// <summary>
+/// Centralized length constraints used across the domain and persistence configuration.
+/// Prefer these constants over hard-coded numeric values.
+/// </summary>
+public static class MaxLength
 {
     public const int C0 = 0;
     public const int C8 = 8;

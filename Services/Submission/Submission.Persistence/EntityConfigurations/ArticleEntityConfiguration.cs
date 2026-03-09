@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Submission.Domain.Entities;
 using Blocks.EntityFramework;
@@ -6,8 +6,17 @@ using Blocks.EntityFramework.EntityConfigurations;
 
 namespace Submission.Persistence.EntityConfigurations;
 
+/// <summary>
+/// EF Core configuration for <see cref="Article"/> entities, including property
+/// constraints and relationships to journals and assets.
+/// </summary>
 internal class ArticleEntityConfiguration : EntityConfiguration<Article>
 {
+    /// <summary>
+    /// Configures title and scope lengths, enum storage for stage and type,
+    /// and relationships to <see cref="Journal"/> and <see cref="Asset"/> entities.
+    /// </summary>
+    /// <param name="builder">The entity type builder.</param>
     public override void Configure(EntityTypeBuilder<Article> builder)
     {
         base.Configure(builder);

@@ -1,11 +1,20 @@
-﻿using Blocks.Core.Constraints;
+using Blocks.Core.Constraints;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Submission.Persistence.EntityConfigurations;
 
+/// <summary>
+/// EF Core configuration for the owned <c>File</c> value object, including size,
+/// server id, and nested name/extension value objects.
+/// </summary>
 internal class FileEntityConfiguration
 {
+    /// <summary>
+    /// Configures the file value object properties such as original name, server id,
+    /// size, and the nested <c>Extension</c> and <c>Name</c> value objects.
+    /// </summary>
+    /// <param name="builder">The complex property builder for the file type.</param>
     public void Configure(ComplexPropertyBuilder<Domain.ValueObjects.File> builder)
     {
         builder.Property(e => e.OriginalName)

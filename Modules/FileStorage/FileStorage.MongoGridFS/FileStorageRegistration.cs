@@ -1,4 +1,4 @@
-﻿using Blocks.Core;
+using Blocks.Core;
 using FileStorage.Contracts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,8 +8,18 @@ using MongoDB.Driver.GridFS;
 
 namespace FileStorage.MongoGridFS;
 
+/// <summary>
+/// Service registration helpers for configuring MongoDB GridFS-based file storage.
+/// </summary>
 public static class FileStorageRegistration
 {
+    /// <summary>
+    /// Registers MongoDB GridFS file storage components and the <see cref="IFileService"/>
+    /// implementation using configuration bound to <see cref="MongoGridFsFileStorageOptions"/>.
+    /// </summary>
+    /// <param name="services">The service collection to register into.</param>
+    /// <param name="configuration">Application configuration used for connection strings and options.</param>
+    /// <returns>The same service collection for chaining.</returns>
     public static IServiceCollection AddMongoFileStorage(this IServiceCollection services, IConfiguration configuration)
     {
 

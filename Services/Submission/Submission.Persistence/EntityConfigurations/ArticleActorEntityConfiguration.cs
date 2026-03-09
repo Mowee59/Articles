@@ -1,12 +1,21 @@
-﻿using Articles.Abstractions.Enums;
+using Articles.Abstractions.Enums;
 using Microsoft.EntityFrameworkCore;
 using Submission.Domain.Entities;
 using Blocks.EntityFramework;
 
 namespace Submission.Persistence.EntityConfigurations;
 
+/// <summary>
+/// EF Core configuration for <see cref="ArticleActor"/> entities, including composite
+/// key, discriminator, role enum storage, and relationships to articles and people.
+/// </summary>
 internal class ArticleActorEntityConfiguration : IEntityTypeConfiguration<ArticleActor>
 {
+    /// <summary>
+    /// Configures composite key on article, person, and role; TPH discriminator;
+    /// default role; and relationships to <see cref="Article"/> and <see cref="Person"/>.
+    /// </summary>
+    /// <param name="builder">The entity type builder.</param>
     public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<ArticleActor> builder)
     {
         builder.HasKey(e => new { e.ArticleId, e.PersonId, e.Role }); // Composite primary key
