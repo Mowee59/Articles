@@ -14,6 +14,12 @@
     <Project Path="Modules/FileStorage/FileStorage.MongoGridFS/FileStorage.MongoGridFS.csproj" Id="80813994-b857-4461-a5ed-f392e5d22ba7" />
   </Folder>
   <Folder Name="/Services/" />
+  <Folder Name="/Services/Auth/">
+    <Project Path="Services/Auth/Auth.API/Auth.API.csproj" Id="76f17a4a-1e54-4fa2-92e0-81582aec8a4d" />
+    <Project Path="Services/Auth/Auth.Application/Auth.Application.csproj" Id="aba711ed-904e-4156-bfc3-6b921a5a7790" />
+    <Project Path="Services/Auth/Auth.Domain/Auth.Domain.csproj" Id="50f603b3-bdd2-48df-a5f1-559cebcb138d" />
+    <Project Path="Services/Auth/Auth.Persistence/Auth.Persistence.csproj" Id="b40dbf3e-4cd9-4e5f-baf0-a43255740f8c" />
+  </Folder>
   <Folder Name="/Services/Submission/">
     <Project Path="services/submission/Submission.Application/Submission.Application.csproj" Id="3352da2d-c192-4e8d-ab17-57a1d005d764" />
     <Project Path="services/submission/Submission.Domain/Submission.Domain.csproj" Id="8c785737-086c-4b20-892b-b250e50eec1f" />
