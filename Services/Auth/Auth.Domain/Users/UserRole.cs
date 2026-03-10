@@ -7,7 +7,7 @@ namespace Auth.Domain.Users;
 /// Inherits from <see cref="IdentityUserRole{TKey}"/> for ASP.NET Core Identity integration.
 /// Used to associate a user with a specific role, and optionally track assignment period details.
 /// </summary>
-public class UserRole : IdentityUserRole<int>
+public partial class UserRole : IdentityUserRole<int>
 {
     /// <summary>
     /// The date when the user was assigned to this role.

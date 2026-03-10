@@ -9,6 +9,10 @@
     <Project Path="Domain/Blocks.Domain.csproj" Id="fca835cc-3225-4ccf-aabb-5cbd06cca65d" />
   </Folder>
   <Folder Name="/Modules/" />
+  <Folder Name="/Modules/EmailService/">
+    <Project Path="Modules/EmailService/EmailService.Contracts/EmailService.Contracts.csproj" Id="2680eb95-a84d-45c5-92f0-db528b41bc8f" />
+    <Project Path="Modules/EmailService/EmailService.Smtp/EmailService.Smtp.csproj" Id="dea4fd5e-5350-4cd8-bba8-f881c643e07b" />
+  </Folder>
   <Folder Name="/Modules/FileStorage/">
     <Project Path="Modules/FileStorage/FileStorage.Contracts/FileStorage.Contracts.csproj" Id="667f1698-92f3-4e3e-ac60-35d8d4cb3be3" />
     <Project Path="Modules/FileStorage/FileStorage.MongoGridFS/FileStorage.MongoGridFS.csproj" Id="80813994-b857-4461-a5ed-f392e5d22ba7" />

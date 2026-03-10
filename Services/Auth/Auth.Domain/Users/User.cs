@@ -12,7 +12,7 @@ namespace Auth.Domain.Users;
 /// Implements <see cref="IEntity"/> for cross-layer consistency.
 /// Stores basic identity information, professional profile, honorific title, and organizational roles.
 /// </summary>
-public class User : IdentityUser<int>, IEntity
+public partial class User : IdentityUser<int>, IEntity
 {
     /// <summary>
     /// The user's first name.
