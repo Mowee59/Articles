@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Blocks.Domain.Entities;
 
-namespace Auth.Domain.Role;
+namespace Auth.Domain.Roles;
 
 /// <summary>
 /// Represents a user role within the authentication system.

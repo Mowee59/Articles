@@ -1,4 +1,4 @@
-using Auth.Domain.Role;
+using Auth.Domain.Roles;
 using Blocks.EntityFramework.EntityConfigurations;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Blocks.Core.Constraints;

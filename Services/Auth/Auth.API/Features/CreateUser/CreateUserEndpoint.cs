@@ -12,6 +12,7 @@ namespace Auth.API.Features.CreateUser;
 
 [Authorize(Roles = Role.USERADMIN)]
 [HttpPost("users")]
+[Tags("Users")]
 public class CreateUserEndpoint(UserManager<User> userManager) 
     : Endpoint<CreateUserCommand, CreateUserResponse>
 {

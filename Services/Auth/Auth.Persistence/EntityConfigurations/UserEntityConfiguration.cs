@@ -76,5 +76,11 @@ internal class UserEntityConfiguration : EntityConfiguration<User>
             .WithOne()
             .HasForeignKey(e => e.UserId)
             .OnDelete(DeleteBehavior.Cascade); // Roles deleted when User is deleted
+
+        //Refresh Tokens
+        builder.HasMany(e => e.RefreshTokens)
+            .WithOne()
+            .HasForeignKey(e => e.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

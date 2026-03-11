@@ -30,4 +30,9 @@ public partial class User
         return user;
 
     }
+
+    public void AddRefreshToken(RefreshToken refreshToken)
+    {
+       _refreshTokens.Add(refreshToken);
+    }
 }

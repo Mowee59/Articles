@@ -1,5 +1,5 @@
 using Auth.Domain.Users;
-using Auth.Domain.Role;
+using Auth.Domain.Roles;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 

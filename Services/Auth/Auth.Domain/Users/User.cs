@@ -62,10 +62,15 @@ public partial class User : IdentityUser<int>, IEntity
     /// <summary>
     /// Backing field for user's assigned roles in the system.
     /// </summary>
-    private List<UserRole> _userRoles = new List<UserRole>();
+    private List<UserRole> _userRoles = new ();
 
     /// <summary>
     /// Roles currently assigned to this user (read-only).
     /// </summary>
     public virtual IReadOnlyList<UserRole> UserRoles => _userRoles;
+
+    private List<RefreshToken> _refreshTokens { get; set; } = new();
+
+    public virtual IReadOnlyList<RefreshToken> RefreshTokens => _refreshTokens;
+
 }
