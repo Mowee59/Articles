@@ -24,6 +24,7 @@
     <Project Path="Services/Auth/Auth.API/Auth.API.csproj" Id="76f17a4a-1e54-4fa2-92e0-81582aec8a4d" />
     <Project Path="Services/Auth/Auth.Application/Auth.Application.csproj" Id="aba711ed-904e-4156-bfc3-6b921a5a7790" />
     <Project Path="Services/Auth/Auth.Domain/Auth.Domain.csproj" Id="50f603b3-bdd2-48df-a5f1-559cebcb138d" />
+    <Project Path="Services/Auth/Auth.Grpc.Contracts/Auth.Grpc.Contracts.csproj" Id="3f6a8b69-0166-4ed4-8fb5-8a66169c05fb" />
     <Project Path="Services/Auth/Auth.Persistence/Auth.Persistence.csproj" Id="b40dbf3e-4cd9-4e5f-baf0-a43255740f8c" />
   </Folder>
   <Folder Name="/Services/Journals/">
