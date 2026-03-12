@@ -6,6 +6,7 @@
     <Project Path="BuildingBlocks/Blocks.Core/Blocks.Core.csproj" Id="73128971-42a8-41b3-b9e4-9019f0a7e65b" />
     <Project Path="BuildingBlocks/Blocks.Exceptions/Blocks.Exceptions.csproj" Id="073d6332-52a7-45aa-a92e-c83c7a6bf487" />
     <Project Path="BuildingBlocks/Blocks.MediatR/Blocks.MediatR.csproj" Id="aa075dee-2c56-40e6-ad9b-b5aa92f8cfdd" />
+    <Project Path="BuildingBlocks/Blocks.Redis/Blocks.Redis.csproj" Id="043945f3-8c27-4d91-bac8-47e0883b321e" />
     <Project Path="BuildingBlocks/BlocksEntityFramework/Blocks.EntityFramework.csproj" Id="5b701f64-d065-428a-9c0a-b28226940aa7" />
     <Project Path="Domain/Blocks.Domain.csproj" Id="fca835cc-3225-4ccf-aabb-5cbd06cca65d" />
   </Folder>
@@ -24,6 +25,11 @@
     <Project Path="Services/Auth/Auth.Application/Auth.Application.csproj" Id="aba711ed-904e-4156-bfc3-6b921a5a7790" />
     <Project Path="Services/Auth/Auth.Domain/Auth.Domain.csproj" Id="50f603b3-bdd2-48df-a5f1-559cebcb138d" />
     <Project Path="Services/Auth/Auth.Persistence/Auth.Persistence.csproj" Id="b40dbf3e-4cd9-4e5f-baf0-a43255740f8c" />
+  </Folder>
+  <Folder Name="/Services/Journals/">
+    <Project Path="Services/Journals/Journals.Api/Journals.Api.csproj" Id="1975272a-b972-43ef-874f-3d4fe2c6d0a7" />
+    <Project Path="Services/Journals/Journals.Domain/Journals.Domain.csproj" Id="cc16edf3-7ce8-4521-b6ed-2107858c77c2" />
+    <Project Path="Services/Journals/Journals.Persistence/Journals.Persistence.csproj" Id="2eed709a-0040-4a8d-b19c-fde346254fea" />
   </Folder>
   <Folder Name="/Services/Submission/">
     <Project Path="services/submission/Submission.Application/Submission.Application.csproj" Id="3352da2d-c192-4e8d-ab17-57a1d005d764" />
